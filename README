@@ -1,0 +1,23 @@
+
+Bebo Photo Downloader
+
+Python script to download your photos from bebo.
+
+Someone asked me for a way to download all their albums from bebo, and so this script was born.
+
+Usage:
+bebo_dl.py
+or
+python3 bebo_dl.py
+
+Enter your username and password and the script will connect to bebo and start downloading your albums to the current directory.
+
+Command Line options:
+    -h help
+    -u USERNAME (specify username on command line instead)
+    -o OUTPUTDIR (change output directory)
+
+It requires python3 and the BeautifulSoup module (http://www.crummy.com/software/BeautifulSoup/)
+
+I have only used it once on Linux, but should work OK under windows too.
+
