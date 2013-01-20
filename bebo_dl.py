@@ -93,6 +93,7 @@ def bebo_login(user, passwd):
     else:
         return (0, opener)
 
+
 def get_photo_link(opener):
     """ Parse the link to the photo album page from bebo home page """
     # Could have just parsed the memberid number,
@@ -161,7 +162,7 @@ def download_album(name, link, outdir, opener):
         try:
             soup = BeautifulSoup(opener.open(link))
         except (urllib.error.HTTPError, urllib.error.URLError):
-            time.sleep(0.3 * i)
+            time.sleep(0.2 * i)
             if i == 4:
                 raise
         else:
@@ -207,7 +208,7 @@ def download_album(name, link, outdir, opener):
             try:
                 urllib.request.urlretrieve(file_url, filename)
             except (urllib.error.HTTPError, urllib.error.URLError):
-                time.sleep(0.3 * i)
+                time.sleep(0.2 * i)
                 if i == 4:
                     print("\nError downloading file:", file_url, '\n')
                     total_error = total_error + 1
